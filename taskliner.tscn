@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dwg5qk3qtoa4o"]
+
+[ext_resource type="Script" uid="uid://b38bx268j1tdc" path="res://Scripts/AppLaunch/AppLaunch.gd" id="1_jvhdo"]
+[ext_resource type="Script" uid="uid://bupcr3q7mymuj" path="res://Scripts/tests/HelloWorldMarkdown.cs" id="2_ihnh4"]
+
+[node name="Control" type="Control" unique_id=34200623]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AppLaunch" type="Node" parent="." unique_id=2027758343]
+script = ExtResource("1_jvhdo")
+
+[node name="Backend" type="Node" parent="." unique_id=522970025]
+
+[node name="OS" type="Node" parent="Backend" unique_id=203335299]
+
+[node name="FileDialog" type="FileDialog" parent="Backend/OS" unique_id=356555241]
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+use_native_dialog = true
+
+[node name="MenuBar" type="MenuBar" parent="Backend/OS" unique_id=40725563]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Node" type="Node" parent="." unique_id=430966838]
+script = ExtResource("2_ihnh4")
