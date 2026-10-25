@@ -8,6 +8,6 @@ public partial class HelloWorldMarkdown : Node
 	{
 		var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();
 		var doc = Markdown.Parse("# Hello **world**", pipeline);
-		GD.Print(doc.Count); // should print 1
+		GD.Print(doc);
 	}
 }

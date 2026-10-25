@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dwg5qk3qtoa4o"]
 
 [ext_resource type="Script" uid="uid://b38bx268j1tdc" path="res://Scripts/AppLaunch/AppLaunch.gd" id="1_jvhdo"]
+[ext_resource type="Texture2D" uid="uid://bu8hmh1634hrf" path="res://icon.svg" id="2_hy7i5"]
 [ext_resource type="Script" uid="uid://bupcr3q7mymuj" path="res://Scripts/tests/HelloWorldMarkdown.cs" id="2_ihnh4"]
 
 [node name="Control" type="Control" unique_id=34200623]
@@ -28,5 +29,102 @@ visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Node" type="Node" parent="." unique_id=430966838]
+[node name="UI" type="Node" parent="." unique_id=1098337164]
+
+[node name="Control" type="Control" parent="UI" unique_id=852549589]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Panel" type="Panel" parent="UI/Control" unique_id=1329053879]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Control/Panel" unique_id=1519602301]
+propagate_maximum_size = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuBar" type="MenuBar" parent="UI/Control/Panel/VBoxContainer" unique_id=1075666859]
+layout_mode = 2
+
+[node name="File" type="PopupMenu" parent="UI/Control/Panel/VBoxContainer/MenuBar" unique_id=1210328940]
+oversampling_override = 1.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Control/Panel/VBoxContainer" unique_id=1596362693]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarkdownTextContainer" type="PanelContainer" parent="UI/Control/Panel/VBoxContainer/HBoxContainer" unique_id=144041389]
+propagate_maximum_size = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Control/Panel/VBoxContainer/HBoxContainer/MarkdownTextContainer" unique_id=333168211]
+layout_mode = 2
+
+[node name="MarkdownOptions" type="HBoxContainer" parent="UI/Control/Panel/VBoxContainer/HBoxContainer/MarkdownTextContainer/VBoxContainer" unique_id=1030505012]
+layout_mode = 2
+
+[node name="OpenMarkdownBtn" type="TextureButton" parent="UI/Control/Panel/VBoxContainer/HBoxContainer/MarkdownTextContainer/VBoxContainer/MarkdownOptions" unique_id=499830918]
+layout_mode = 2
+action_mode = 0
+texture_normal = ExtResource("2_hy7i5")
+stretch_mode = 0
+
+[node name="ViewOptionsTopbarSection" type="HBoxContainer" parent="UI/Control/Panel/VBoxContainer/HBoxContainer/MarkdownTextContainer/VBoxContainer/MarkdownOptions" unique_id=1667461197]
+layout_mode = 2
+alignment = 1
+
+[node name="AutoViewButton" type="TextureButton" parent="UI/Control/Panel/VBoxContainer/HBoxContainer/MarkdownTextContainer/VBoxContainer/MarkdownOptions/ViewOptionsTopbarSection" unique_id=1845580136]
+layout_mode = 2
+action_mode = 0
+texture_normal = ExtResource("2_hy7i5")
+stretch_mode = 0
+
+[node name="PreviewViewButton" type="TextureButton" parent="UI/Control/Panel/VBoxContainer/HBoxContainer/MarkdownTextContainer/VBoxContainer/MarkdownOptions/ViewOptionsTopbarSection" unique_id=1877302103]
+layout_mode = 2
+action_mode = 0
+texture_normal = ExtResource("2_hy7i5")
+stretch_mode = 0
+
+[node name="EditViewButton" type="TextureButton" parent="UI/Control/Panel/VBoxContainer/HBoxContainer/MarkdownTextContainer/VBoxContainer/MarkdownOptions/ViewOptionsTopbarSection" unique_id=1636609990]
+layout_mode = 2
+action_mode = 0
+texture_normal = ExtResource("2_hy7i5")
+stretch_mode = 0
+
+[node name="TextEdit" type="TextEdit" parent="UI/Control/Panel/VBoxContainer/HBoxContainer/MarkdownTextContainer/VBoxContainer" unique_id=1547971051]
+layout_mode = 2
+size_flags_vertical = 3
+drag_and_drop_selection_enabled = false
+wrap_mode = 1
+indent_wrapped_lines = true
+minimap_width = 60
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Control/Panel/VBoxContainer/HBoxContainer" unique_id=1132806251]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.4
+
+[node name="TaskFileExplorerArea" type="VBoxContainer" parent="UI/Control/Panel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=486593278]
+layout_mode = 2
+
+[node name="TaskTimelineArea" type="Panel" parent="UI/Control/Panel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=762466567]
+layout_mode = 2
+
+[node name="TEST" type="Node" parent="." unique_id=430966838]
 script = ExtResource("2_ihnh4")

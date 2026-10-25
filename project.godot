@@ -31,13 +31,17 @@ HiDpiScaling="*uid://cynk8k2nw3re4"
 
 [display]
 
-window/size/viewport_width=800
-window/size/viewport_height=600
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/vsync/vsync_mode=0
 
 [dotnet]
 
 project/assembly_name="Timeliner"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/markdown_previewer/plugin.cfg")
 
 [physics]
 
